@@ -10,7 +10,7 @@ module.exports = [{
   email: 'ann@gmail.com',
   password: '321cba',
 }, {
-  email: 'ivan@gmail.com',
+  email: 'kate@gmail.com',
   password: 'cba321',
 }].map(user => ({
     ...user,

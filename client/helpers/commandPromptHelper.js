@@ -1,6 +1,4 @@
-const inquirer = require('inquirer');
-
-const questions = [{
+module.exports = [{
   type: 'input',
   name: 'email',
   message: 'Enter your email: ',
@@ -10,5 +8,3 @@ const questions = [{
   name: 'password',
   message: 'Enter your password: ',
 }];
-
-module.exports = inquirer.prompt(questions);

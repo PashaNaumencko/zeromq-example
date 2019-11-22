@@ -1,4 +1,4 @@
 const { subSocket } = require('./connection');
-const { login } = require('../services/user.service');
+const { isAuthenticated } = require('../services/user.service');
 
-subSocket.on('message', (topic, message) => console.log(JSON.parse(message)));
+subSocket.on('message', (topic, message) => isAuthenticated(JSON.parse(message)));
