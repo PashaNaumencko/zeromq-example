@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node client.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "zeromq": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
