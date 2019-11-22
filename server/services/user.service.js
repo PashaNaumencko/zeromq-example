@@ -4,9 +4,15 @@ const { pubSocket } = require('../sockets/connection');
 const login = async (data) => {
   console.log(data.toString());
   try {
-    const { email, password, msg_id } = data;
+    const { type, email, pwd, msg_id } = data;
     const user = await userRepository.findOne(email);
-    if(!user || password !== user.password) {
+    if(type && email && pwd && msg_id) {
+      pubSocket.send(['api_out', {
+        status: 'error',
+        error: 'WRONG_FORMAT',
+        msg_id
+      }]);
+    } else if(!user || pwd !== user.password) {
       pubSocket.send(['api_out', {
         status: 'error',
         error: 'WRONG_PWD',

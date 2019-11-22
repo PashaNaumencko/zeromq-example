@@ -1,4 +1,4 @@
 const { subSocket } = require('./connection');
 const { login } = require('../services/user.service');
 
-subSocket.on('message', (topic, message) => login(message));
+subSocket.on('message', (topic, message) => console.log(JSON.parse(message)));
